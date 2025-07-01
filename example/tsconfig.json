@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": "../src",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "rootDir": ".."
+  },
+  "include": ["./index.tsx", "../src/**/*"]
+}

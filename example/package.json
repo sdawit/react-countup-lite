@@ -1,0 +1,16 @@
+{
+    "name": "react-countup-lite-example",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build"
+    },
+    "dependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "vite": "^4.0.0",
+        "typescript": "^4.0.0"
+    }
+}
