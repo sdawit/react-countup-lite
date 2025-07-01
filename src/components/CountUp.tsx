@@ -8,9 +8,9 @@ export type CountUpProps = {
   duration?: number; // in seconds
   delay?: number; // in seconds
   decimals?: number;
-  format?: (value: number) => string; // custom formatting function
+  format?: (_value: number) => string; // custom formatting function
   suffix?: string; // e.g., 'k', 'M'
-  easingFn?: (t: number) => number; // optional easing function
+  easingFn?: (_t: number) => number; // optional easing function
   playOnView?: boolean; // animate when in viewport
   className?: string;
   style?: React.CSSProperties;
