@@ -16,7 +16,7 @@ export type CountUpProps = {
   style?: React.CSSProperties;
 };
 
-export const CountUp: React.FC<CountUpProps> = props => {
+export const CountUp: React.FC<CountUpProps> = (props) => {
   const { value, ref } = useCountUp(props);
   const [displayValue, displaySuffix] = getSuffix(value, props.suffix);
   const formatted = props.format

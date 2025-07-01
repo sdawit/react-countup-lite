@@ -129,7 +129,7 @@ function App() {
             <h4>Custom Formatting</h4>
             <CountUp
               end={1234567}
-              format={value => `$${value.toLocaleString()}`}
+              format={(value) => `$${value.toLocaleString()}`}
             />
           </div>
         </div>
@@ -158,7 +158,7 @@ function App() {
             <input
               type="number"
               value={value}
-              onChange={e => setValue(Number(e.target.value))}
+              onChange={(e) => setValue(Number(e.target.value))}
               style={{
                 padding: 8,
                 border: '1px solid #ddd',
@@ -223,7 +223,7 @@ function App() {
             <h4>Currency Format</h4>
             <CountUp
               end={value}
-              format={value => `$${value.toLocaleString()}`}
+              format={(value) => `$${value.toLocaleString()}`}
               duration={2}
             />
           </div>
@@ -284,7 +284,7 @@ function App() {
             <h4>Scientific Notation</h4>
             <CountUp
               end={1.23e6}
-              format={value => value.toExponential(2)}
+              format={(value) => value.toExponential(2)}
               duration={2}
             />
           </div>
@@ -338,7 +338,7 @@ function App() {
                 >
                   <CountUp
                     end={2345678}
-                    format={value => `$${(value / 1000000).toFixed(1)}M`}
+                    format={(value) => `$${(value / 1000000).toFixed(1)}M`}
                     duration={2}
                   />
                 </div>
@@ -360,7 +360,7 @@ function App() {
                 <div style={{ fontSize: '24px', fontWeight: 'bold' }}>
                   <CountUp
                     end={1234567}
-                    format={value => value.toLocaleString()}
+                    format={(value) => value.toLocaleString()}
                     duration={2}
                   />
                 </div>

@@ -60,4 +60,4 @@ export function useCountUp({
   }, [start, end, duration, delay, easingFn, hasPlayed]);
 
   return { value, ref };
-} 
+}
