@@ -14,9 +14,9 @@ A lightweight, performant React component for animated counting with smooth easi
 ## Installation
 
 ```bash
-npm install react-countup-lite
+npm install @sdawit/react-countup-lite
 # or
-yarn add react-countup-lite
+yarn add @sdawit/react-countup-lite
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ yarn add react-countup-lite
 ### Basic Example
 
 ```tsx
-import { CountUp } from 'react-countup-lite';
+import { CountUp } from '@sdawit/react-countup-lite';
 
 function App() {
   return (
@@ -43,7 +43,7 @@ function App() {
 ### Advanced Example
 
 ```tsx
-import { CountUp } from 'react-countup-lite';
+import { CountUp } from '@sdawit/react-countup-lite';
 
 function App() {
   return (
@@ -97,7 +97,7 @@ The library supports easing functions:
 You can also provide your own easing function:
 
 ```tsx
-import { CountUp } from 'react-countup-lite';
+import { CountUp } from '@sdawit/react-countup-lite';
 
 const customEasing = (t: number) => t * t * (3 - 2 * t); // Smoothstep
 

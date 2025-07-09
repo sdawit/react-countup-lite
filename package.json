@@ -1,14 +1,24 @@
 {
+  "name": "@sdawit/react-countup-lite",
   "version": "1.0.0",
+  "description": "A lightweight, performant React component for animated counting with smooth easing functions and customizable formatting",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "module": "dist/react-countup-lite.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/react-countup-lite.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
   "files": [
     "dist",
     "src"
   ],
   "engines": {
-    "node": ">=18.18.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "start": "tsdx watch",
@@ -32,9 +42,24 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "react-countup-lite",
   "author": "Dawit Solomon",
-  "module": "dist/react-countup-lite.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdawit/react-countup-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sdawit/react-countup-lite/issues"
+  },
+  "homepage": "https://github.com/sdawit/react-countup-lite#readme",
+  "keywords": [
+    "react",
+    "countup",
+    "animation",
+    "counter",
+    "typescript",
+    "lightweight",
+    "performance"
+  ],
   "size-limit": [
     {
       "path": "dist/react-countup-lite.cjs.production.min.js",
