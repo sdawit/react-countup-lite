@@ -37,7 +37,9 @@ export function useCountUp({
     if (!hasPlayed) return;
     let raf: number;
     let startTime: number | null = null;
-    let timeout: number;
+    const timeout = window.setTimeout(() => {
+      raf = requestAnimationFrame(animate);
+    }, delay * 1000);
     const animate = (timestamp: number) => {
       if (startTime === null) startTime = timestamp;
       const elapsed = (timestamp - startTime) / 1000; // seconds
@@ -50,9 +52,6 @@ export function useCountUp({
         setValue(end);
       }
     };
-    timeout = window.setTimeout(() => {
-      raf = requestAnimationFrame(animate);
-    }, delay * 1000);
     return () => {
       clearTimeout(timeout);
       cancelAnimationFrame(raf);
