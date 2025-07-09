@@ -54,7 +54,7 @@ export default [
       'no-undef': 'off',
       'no-unused-vars': 'off', // TypeScript handles this
       'prefer-const': 'warn',
-      'prettier/prettier': ['error', { endOfLine: 'lf' }],
+      'prettier/prettier': ['error', { endOfLine: 'auto' }],
     },
     settings: {
       react: { version: 'detect' },
