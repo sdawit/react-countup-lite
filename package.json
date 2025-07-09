@@ -1,6 +1,6 @@
 {
   "name": "@sdawit/react-countup-lite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, performant React component for animated counting with smooth easing functions and customizable formatting",
   "license": "MIT",
   "main": "dist/index.js",
