@@ -64,7 +64,7 @@ function App() {
       {/* Custom formatting */}
       <CountUp
         end={1234567}
-        format={value => `$${value.toLocaleString()}`}
+        format={(value) => `$${value.toLocaleString()}`}
         duration={2}
       />
     </div>
