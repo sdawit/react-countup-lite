@@ -2,6 +2,11 @@
 
 A lightweight, performant React component for animated counting with smooth easing functions and customizable formatting.
 
+[![npm version](https://img.shields.io/npm/v/@sdawit/react-countup-lite.svg)](https://www.npmjs.com/package/@sdawit/react-countup-lite)
+[![bundle size](https://img.shields.io/bundlephobia/min/@sdawit/react-countup-lite)](https://bundlephobia.com/package/@sdawit/react-countup-lite)
+[![CI](https://github.com/sdawit/react-countup-lite/workflows/CI/badge.svg)](https://github.com/sdawit/react-countup-lite/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Features
 
 - 🚀 **Lightweight**: Minimal bundle size with zero dependencies
@@ -10,6 +15,8 @@ A lightweight, performant React component for animated counting with smooth easi
 - 👁️ **Viewport Detection**: Optional animation trigger when element comes into view
 - 📱 **TypeScript**: Full TypeScript support with proper type definitions
 - 🎯 **Flexible**: Configurable duration, delay, decimals, and suffixes
+- 🔧 **Tree-shakable**: Only import what you need
+- 🌐 **Cross-platform**: Works on all modern browsers and React versions
 
 ## Installation
 
@@ -127,7 +134,11 @@ npm start
 - `npm run build` - Build for production
 - `npm test` - Run tests
 - `npm run lint` - Run linter
+- `npm run lint:fix` - Fix linting issues and format code
 - `npm run size` - Check bundle size
+- `npm run version:patch` - Bump patch version (1.0.0 → 1.0.1)
+- `npm run version:minor` - Bump minor version (1.0.0 → 1.1.0)
+- `npm run version:major` - Bump major version (1.0.0 → 2.0.0)
 
 ### Example
 
@@ -141,6 +152,45 @@ The project uses `size-limit` to ensure the library remains lightweight:
 npm run size    # Check current bundle size
 ```
 
+### Automated Releases
+
+This project uses GitHub Actions for automated releases:
+
+1. **Pre-release Testing**: Every pull request runs tests, linting, and bundle size checks
+2. **Automated Publishing**: When you push a version tag (e.g., `v1.0.1`), it automatically:
+   - Runs all tests and checks
+   - Builds the package
+   - Publishes to npm
+   - Creates a GitHub release
+
+#### To Release a New Version:
+
+```bash
+# Bump version and create git tag
+npm run version:patch  # or version:minor, version:major
+
+# Push changes and tag
+git push origin main --tags
+```
+
+The release workflow will automatically publish to npm and create a GitHub release.
+
+## Performance
+
+- **Bundle Size**: ~820B minified and gzipped
+- **Zero Dependencies**: No external dependencies
+- **Tree-shakable**: Only includes code you actually use
+- **Optimized**: Uses `requestAnimationFrame` for smooth 60fps animations
+- **Memory Efficient**: Proper cleanup of timers and observers
+
+## Browser Support
+
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
+- React 16.8+ (for hooks support)
+
 ## License
 
 MIT © Dawit Solomon
@@ -152,3 +202,20 @@ MIT © Dawit Solomon
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### Development Workflow
+
+- All pull requests automatically run tests, linting, and bundle size checks
+- Code must pass all CI checks before merging
+- Use `npm run lint:fix` to automatically fix formatting issues
+- Follow the existing code style and patterns
+
+## Changelog
+
+### [1.0.0] - 2025-07-09
+
+- Initial release
+- Lightweight React countup component with TypeScript support
+- Customizable easing functions and formatting
+- Viewport detection for animation triggers
+- Zero dependencies, minimal bundle size (~820B)
